@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
         }
     );
 });
-builder.Services.AddDbContext<TodoContext>(options =>
+builder.Services.AddDbContext<WebDevContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
