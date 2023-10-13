@@ -12,12 +12,10 @@ const ThemeSwitcher = () => {
 
 	return (
 		<div>
+			<p className="text-xs mb-2 text-center">Current Theme: {theme.charAt(0).toUpperCase() + theme.slice(1)}</p>
 			<select
 				className="select select-bordered p-0 pl-2 text-xs w-full"
 				onChange={(e) => selectTheme(e.target.value)}>
-				<option selected disabled>
-					Theme: {theme.charAt(0).toUpperCase() + theme.slice(1)}
-				</option>
 				{themes.map((theme, idx) => {
 					return (
 						<option key={idx} value={theme.theme}>
